@@ -1,7 +1,12 @@
-const { NodeProject } = require('projen');
-const project = new NodeProject({
+const pj = require('projen');
+const project = new pj.TypeScriptProject({
   defaultReleaseBranch: 'main',
-  name: 'lit-snip',
+  name: '@wheatstalk/lit-snip',
+  description: 'A tool to snip code from code used in README files.',
+
+  bin: {
+    'lit-snip': 'lib/cli.js',
+  },
 
   // deps: [],                          /* Runtime dependencies of this module. */
   // description: undefined,            /* The description is just a string that helps people understand the purpose of the package. */
