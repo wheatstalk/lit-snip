@@ -43,8 +43,8 @@ npx -p @wheatstalk/lit-snip lit-snip ./my-example.lit.ts
 ```
 
 The script will output all the lines between `::SNIP` and `::END-SNIP` and it
-will adjust the indentation to match the comment, wrapping the example in a
-markdown code block like this:
+will adjust the indentation to match the `::SNIP` line's comment, wrapping the
+example in a markdown code block like this:
 
 ```ts
 new IntrinsicValidator(scope, 'IntrinsicValidator', {
