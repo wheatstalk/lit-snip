@@ -10,6 +10,14 @@ const project = new pj.TypeScriptProject({
 
   releaseEveryCommit: true,
   releaseToNpm: true,
+  npmAccess: pj.NpmAccess.PUBLIC,
+
+  projenUpgradeSecret: 'YARN_UPGRADE_TOKEN',
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['github-actions', 'github-actions[bot]', 'misterjoshua'],
+  },
 
   // deps: [],                          /* Runtime dependencies of this module. */
   // description: undefined,            /* The description is just a string that helps people understand the purpose of the package. */

@@ -17,7 +17,6 @@
     "publish:github": "npx projen publish:github",
     "publish:npm": "npx projen publish:npm",
     "upgrade": "npx projen upgrade",
-    "upgrade-projen": "npx projen upgrade-projen",
     "default": "npx projen default",
     "watch": "npx projen watch",
     "package": "npx projen package",
@@ -46,6 +45,9 @@
   "bundledDependencies": [],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
